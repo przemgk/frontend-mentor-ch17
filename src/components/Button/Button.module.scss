@@ -1,0 +1,21 @@
+@import '../../scss/variables';
+
+.button {
+  font-size: $typography__font-size--m;
+  font-weight: $typography__font-weight--bold;
+  letter-spacing: 2px;
+  color: $color__white;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid $color__header-outline;
+  border-radius: 10px;
+  padding: 12px 40px;
+  cursor: pointer;
+}
+
+.buttonPrimary {
+  background-color: $color__white;
+  color: $color__dark-text;
+  border: 0;
+  padding: 16px 40px;
+}

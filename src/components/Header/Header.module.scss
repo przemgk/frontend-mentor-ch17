@@ -22,17 +22,17 @@
   color: $color__dark-text;
   padding: 12px 24px;
   border-radius: 10px;
+}
 
-  &__label {
-    font-size: $typography__font-size--s;
-    color: $color__score-text;
-    text-transform: uppercase;
-    margin-bottom: 4px;
-  }
+.label {
+  font-size: $typography__font-size--s;
+  color: $color__score-text;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
 
-  &__points {
-    font-size: $typography__font-size--xxl;
-    font-weight: $typography__font-weight--bold;
-    line-height: 1;
-  }
+.points {
+  font-size: $typography__font-size--xxl;
+  font-weight: $typography__font-weight--bold;
+  line-height: 1;
 }
