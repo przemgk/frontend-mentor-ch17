@@ -1,0 +1,42 @@
+@import '../../scss/variables';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color__white;
+  color: $color__dark-text;
+  border-radius: 10px;
+}
+
+.heading {
+  margin: 48px 0 64px;
+  font-size: $typography__font-size--xl;
+  font-weight: $typography__font-weight--bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.rules {
+  display: block;
+  width: 90%;
+}
+
+.closeButton {
+  display: block;
+  position: absolute;
+  bottom: 48px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.closeButtonIcon {
+  display: block;
+  width: 100%;
+}

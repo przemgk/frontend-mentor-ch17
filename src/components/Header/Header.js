@@ -6,6 +6,7 @@ import styles from 'components/Header/Header.module.scss';
 const Header = () => (
   <div className={styles.header}>
     <Link to="/">
+      <h1 className={styles.heading}>Rock, paper, scissors, lizard and spock</h1>
       <img className={styles.logo} src={Logo} alt="Rock, paper, scissors, lizard and spock" />
     </Link>
     <div className={styles.score}>

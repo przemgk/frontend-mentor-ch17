@@ -36,3 +36,13 @@
   font-weight: $typography__font-weight--bold;
   line-height: 1;
 }
+
+.heading {
+  display: flex;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: -1px;
+  left: -1px;
+  clip: rect(0, 0, 0, 0);
+}
