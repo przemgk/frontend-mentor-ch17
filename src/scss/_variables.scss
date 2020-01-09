@@ -1,0 +1,34 @@
+// ==========================
+//        TYPOGRAPHY
+// ==========================
+
+$typography__font-family: 'Barlow Semi Condensed', sans-serif;
+$typography__font-weight--normal: 600;
+$typography__font-weight--bold: 700;
+$typography__font-size--initial: 62.5%;
+$typography__font-size--xxl: 5rem;
+$typography__font-size--xl: 3rem;
+$typography__font-size--l: 2.4rem;
+$typography__font-size--m: 1.8rem;
+$typography__font-size--r: 1.4rem;
+$typography__font-size--s: 1rem;
+
+// ==========================
+//           COLOR
+// ==========================
+
+$color__dark-text: hsl(229, 25%, 31%);
+$color__score-text: hsl(229, 64%, 46%);
+$color__header-outline: hsl(217, 16%, 45%);
+$color__white: hsl(0, 0%, 100%);
+
+// ==========================
+//          GRADIENTS
+// ==========================
+
+$gradient__scissors: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
+$gradient__paper: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
+$gradient__rock: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
+$gradient__lizard: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
+$gradient__cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
+$gradient__radial: radial-gradient(circle at 50% 10%, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
