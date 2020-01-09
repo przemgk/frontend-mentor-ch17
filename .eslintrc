@@ -3,6 +3,12 @@
   "env": { "jest": true },
   "globals": { "document": true },
   "rules": {
+    "import/no-unresolved": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": { "paths": ["src"], "extensions": [".js", ".jsx"] }
+    }
   }
 }
