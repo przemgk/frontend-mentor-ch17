@@ -72,10 +72,10 @@ body {
   font-family: $typography__font-family;
   font-size: $typography__font-size--r;
   font-weight: $typography__font-weight--normal;
-  line-height: 1.6;
   color: $color__white;
   background: $gradient__radial;
   min-height: 100vh;
+  padding: 24px;
 }
 
 button,

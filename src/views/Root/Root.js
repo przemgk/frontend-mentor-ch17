@@ -1,9 +1,14 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import Header from 'components/Header';
+import Footer from 'components/Footer';
+import Roundel from 'components/Roundel';
 
 const Root = () => (
   <BrowserRouter>
-    <h1>Site under construction</h1>
+    <Header />
+    <Roundel />
+    <Footer />
   </BrowserRouter>
 );
 

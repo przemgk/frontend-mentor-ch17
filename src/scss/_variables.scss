@@ -21,12 +21,15 @@ $color__dark-text: hsl(229, 25%, 31%);
 $color__score-text: hsl(229, 64%, 46%);
 $color__header-outline: hsl(217, 16%, 45%);
 $color__white: hsl(0, 0%, 100%);
+$color__grey: hsl(232, 20%, 90%);
+
+$color__scissors-border-bottom: hsl(29, 76%, 44%);
 
 // ==========================
 //          GRADIENTS
 // ==========================
 
-$gradient__scissors: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
+$gradient__scissors: linear-gradient(0, hsl(39, 89%, 49%) 0, hsl(40, 84%, 53%) 100%);
 $gradient__paper: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
 $gradient__rock: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
 $gradient__lizard: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
