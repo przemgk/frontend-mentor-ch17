@@ -9,8 +9,8 @@ const Header = () => (
       <img className={styles.logo} src={Logo} alt="Rock, paper, scissors, lizard and spock" />
     </Link>
     <div className={styles.score}>
-      <span className={styles.score__label}>Score</span>
-      <span className={styles.score__points}>12</span>
+      <span className={styles.label}>Score</span>
+      <span className={styles.points}>12</span>
     </div>
   </div>
 );
