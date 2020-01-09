@@ -6,6 +6,7 @@ import IconPaper from 'assets/icon-paper.svg';
 import IconLizard from 'assets/icon-lizard.svg';
 import styles from 'components/Roundel/Roundel.module.scss';
 import cn from 'classnames';
+import PropTypes from 'prop-types';
 
 const types = [
   { name: 'Scissors', gestureIcon: IconScissors },
@@ -26,6 +27,10 @@ const Roundel = ({ roundelType }) => {
         <div className={styles.roundelInner} />
       </div>
     ));
+};
+
+Roundel.propTypes = {
+  roundelType: PropTypes.oneOf(['Scissors', 'Lizard', 'Paper', 'Rock', 'Spock']).isRequired
 };
 
 export default Roundel;
