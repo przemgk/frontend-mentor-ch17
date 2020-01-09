@@ -7,7 +7,11 @@ import Roundel from 'components/Roundel';
 const Root = () => (
   <BrowserRouter>
     <Header />
-    <Roundel />
+    <Roundel roundelType="Scissors" />
+    <Roundel roundelType="Rock" />
+    <Roundel roundelType="Spock" />
+    <Roundel roundelType="Paper" />
+    <Roundel roundelType="Lizard" />
     <Footer />
   </BrowserRouter>
 );

@@ -30,14 +30,6 @@
   z-index: 1;
 }
 
-.scissors {
-  background: $gradient__scissors;
-
-  &::after {
-    background-color: $color__scissors-border-bottom;
-  }
-}
-
 .roundelInner {
   display: flex;
   align-items: center;
@@ -57,5 +49,45 @@
     height: 100%;
     background: $color__white;
     border-radius: 50%;
+  }
+}
+
+.scissors {
+  background: $gradient__scissors;
+
+  &::after {
+    background-color: $color__scissors-border-bottom;
+  }
+}
+
+.rock {
+  background: $gradient__rock;
+
+  &::after {
+    background-color: $color__rock-border-bottom;
+  }
+}
+
+.paper {
+  background: $gradient__paper;
+
+  &::after {
+    background-color: $color__paper-border-bottom;
+  }
+}
+
+.lizard {
+  background: $gradient__lizard;
+
+  &::after {
+    background-color: $color__lizard-border-bottom;
+  }
+}
+
+.spock {
+  background: $gradient__spock;
+
+  &::after {
+    background-color: $color__spock-border-bottom;
   }
 }

@@ -24,14 +24,18 @@ $color__white: hsl(0, 0%, 100%);
 $color__grey: hsl(232, 20%, 90%);
 
 $color__scissors-border-bottom: hsl(29, 76%, 44%);
+$color__paper-border-bottom: hsl(230, 64%, 46%);
+$color__rock-border-bottom: hsl(347, 75%, 35%);
+$color__lizard-border-bottom: hsl(262, 51%, 44%);
+$color__spock-border-bottom: hsl(194, 58%, 43%);
 
 // ==========================
 //          GRADIENTS
 // ==========================
 
 $gradient__scissors: linear-gradient(0, hsl(39, 89%, 49%) 0, hsl(40, 84%, 53%) 100%);
-$gradient__paper: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
-$gradient__rock: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
-$gradient__lizard: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
-$gradient__cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
+$gradient__paper: linear-gradient(0, hsl(230, 89%, 62%) 0, hsl(230, 89%, 65%) 100%);
+$gradient__rock: linear-gradient(0, hsl(349, 71%, 52%) 0, hsl(349, 70%, 56%) 100%);
+$gradient__lizard: linear-gradient(0, hsl(261, 73%, 60%) 0, hsl(261, 72%, 63%) 100%);
+$gradient__spock: linear-gradient(0, hsl(189, 59%, 53%) 0, hsl(189, 58%, 57%) 100%);
 $gradient__radial: radial-gradient(circle at 50% 10%, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
