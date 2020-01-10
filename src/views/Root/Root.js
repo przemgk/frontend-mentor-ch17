@@ -4,12 +4,14 @@ import Header from 'components/Header';
 import Footer from 'components/Footer';
 // import Modal from 'components/Modal';
 import Start from 'views/Start';
+import Round from 'views/Round';
 
 const Root = () => (
   <BrowserRouter>
     <Header />
     <Switch>
       <Route exact path="/" component={Start} />
+      <Route exact path="/round" component={Round} />
     </Switch>
     {/* <Modal /> */}
     <Footer />

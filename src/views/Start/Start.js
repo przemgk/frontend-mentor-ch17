@@ -4,11 +4,11 @@ import Roundel from 'components/Roundel';
 
 const Start = () => (
   <div className={styles.wrapper}>
-    <Roundel roundelType="Scissors" />
-    <Roundel roundelType="Lizard" />
-    <Roundel roundelType="Paper" />
-    <Roundel roundelType="Rock" />
-    <Roundel roundelType="Spock" />
+    <Roundel type="Scissors" />
+    <Roundel type="Lizard" />
+    <Roundel type="Paper" />
+    <Roundel type="Rock" />
+    <Roundel type="Spock" />
   </div>
 );
 
