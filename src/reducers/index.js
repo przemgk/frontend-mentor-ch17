@@ -13,7 +13,7 @@ const initialState = {
     { name: 'Rock', gestureIcon: IconRock, beatings: ['Lizard', 'Scissors'] },
     { name: 'Spock', gestureIcon: IconSpock, beatings: ['Scissors', 'Rock'] }
   ],
-  score: sessionStorage.getItem('score') || 0,
+  score: Number(sessionStorage.getItem('score')) || 0,
   userChoice: ''
 };
 
