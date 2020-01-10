@@ -1,42 +1,46 @@
 import React from 'react';
-import IconScissors from 'assets/icon-scissors.svg';
-import IconRock from 'assets/icon-rock.svg';
-import IconSpock from 'assets/icon-spock.svg';
-import IconPaper from 'assets/icon-paper.svg';
-import IconLizard from 'assets/icon-lizard.svg';
 import styles from 'components/Roundel/Roundel.module.scss';
 import cn from 'classnames';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-const types = [
-  { name: 'Scissors', gestureIcon: IconScissors },
-  { name: 'Lizard', gestureIcon: IconLizard },
-  { name: 'Paper', gestureIcon: IconPaper },
-  { name: 'Rock', gestureIcon: IconRock },
-  { name: 'Spock', gestureIcon: IconSpock }
-];
-
-const Roundel = ({ type, isWinner }) => {
+const Roundel = ({ type, isWinner, name, gestureIcon, onClick }) => {
   const roundelClass = cn(styles.roundel, styles[type.toLowerCase()]);
 
-  return types
-    .filter(({ name }) => name === type)
-    .map(({ name, gestureIcon }) => (
-      <div className={roundelClass}>
-        <img className={styles.gesture} src={gestureIcon} alt={name} />
-        <div className={styles.roundelInner} />
-        {isWinner && <div className={styles.winner} />}
-      </div>
-    ));
+  const handleEnterPress = e => e.key === 'Enter' && onClick();
+
+  return (
+    <div
+      className={roundelClass}
+      onClick={onClick}
+      role="button"
+      tabIndex="0"
+      onKeyPress={handleEnterPress}
+    >
+      <img className={styles.gesture} src={gestureIcon} alt={name} />
+      <div className={styles.roundelInner} />
+      {isWinner && <div className={styles.winner} />}
+    </div>
+  );
 };
 
 Roundel.propTypes = {
   type: PropTypes.oneOf(['Scissors', 'Lizard', 'Paper', 'Rock', 'Spock']).isRequired,
-  isWinner: PropTypes.bool
+  isWinner: PropTypes.bool,
+  name: PropTypes.string.isRequired,
+  gestureIcon: PropTypes.string.isRequired,
+  onClick: PropTypes.func
 };
 
 Roundel.defaultProps = {
-  isWinner: false
+  isWinner: false,
+  onClick: () => {}
 };
 
-export default Roundel;
+const mapStateToProps = (state, { type }) => {
+  const [roundel] = state.roundelTypes.filter(({ name }) => name === type);
+
+  return roundel;
+};
+
+export default connect(mapStateToProps)(Roundel);
