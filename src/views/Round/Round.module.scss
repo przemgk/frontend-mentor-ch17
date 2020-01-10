@@ -1,0 +1,41 @@
+@import '../../scss/variables';
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 80px 32px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.placeholder {
+  width: 90px;
+  height: 90px;
+  margin: 15px;
+  background: $color__dark-text;
+  border-radius: 50%;
+}
+
+.label {
+  margin-top: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.result {
+  grid-column: 1 / 3;
+  text-align: center;
+}
+
+.resultHeading {
+  font-size: $typography__font-size--xl;
+  font-weight: $typography__font-weight--bold;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
