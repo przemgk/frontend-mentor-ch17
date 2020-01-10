@@ -16,21 +16,27 @@ const types = [
   { name: 'Spock', gestureIcon: IconSpock }
 ];
 
-const Roundel = ({ roundelType }) => {
-  const roundelClass = cn(styles.roundel, styles[roundelType.toLowerCase()]);
+const Roundel = ({ type, isWinner }) => {
+  const roundelClass = cn(styles.roundel, styles[type.toLowerCase()]);
 
   return types
-    .filter(({ name }) => name === roundelType)
+    .filter(({ name }) => name === type)
     .map(({ name, gestureIcon }) => (
       <div className={roundelClass}>
         <img className={styles.gesture} src={gestureIcon} alt={name} />
         <div className={styles.roundelInner} />
+        {isWinner && <div className={styles.winner} />}
       </div>
     ));
 };
 
 Roundel.propTypes = {
-  roundelType: PropTypes.oneOf(['Scissors', 'Lizard', 'Paper', 'Rock', 'Spock']).isRequired
+  type: PropTypes.oneOf(['Scissors', 'Lizard', 'Paper', 'Rock', 'Spock']).isRequired,
+  isWinner: PropTypes.bool
+};
+
+Roundel.defaultProps = {
+  isWinner: false
 };
 
 export default Roundel;

@@ -39,3 +39,8 @@ $gradient__rock: linear-gradient(0, hsl(349, 71%, 52%) 0, hsl(349, 70%, 56%) 100
 $gradient__lizard: linear-gradient(0, hsl(261, 73%, 60%) 0, hsl(261, 72%, 63%) 100%);
 $gradient__spock: linear-gradient(0, hsl(189, 59%, 53%) 0, hsl(189, 58%, 57%) 100%);
 $gradient__radial: radial-gradient(circle at 50% 10%, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+$gradient__radial--winner: radial-gradient(
+  circle at 45% 48%,
+  rgba($color__header-outline, 0.4) 30%,
+  transparent 60%
+);
