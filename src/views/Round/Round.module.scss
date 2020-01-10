@@ -15,9 +15,13 @@
 }
 
 .placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 90px;
   height: 90px;
   margin: 15px;
+  font-size: $typography__font-size--xxl;
   background: $color__dark-text;
   border-radius: 50%;
 }

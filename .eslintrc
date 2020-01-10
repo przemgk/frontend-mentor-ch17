@@ -1,7 +1,7 @@
 {
   "extends": ["airbnb", "airbnb/hooks", "prettier", "prettier/react"],
   "env": { "jest": true },
-  "globals": { "document": true, "window": true },
+  "globals": { "document": true, "window": true, "sessionStorage": true },
   "rules": {
     "import/no-unresolved": 0,
     "import/no-extraneous-dependencies": 0,

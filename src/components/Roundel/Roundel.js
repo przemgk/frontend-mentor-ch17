@@ -25,15 +25,18 @@ const Roundel = ({ type, isWinner, name, gestureIcon, onClick }) => {
 };
 
 Roundel.propTypes = {
-  type: PropTypes.oneOf(['Scissors', 'Lizard', 'Paper', 'Rock', 'Spock']).isRequired,
+  type: PropTypes.string,
   isWinner: PropTypes.bool,
-  name: PropTypes.string.isRequired,
-  gestureIcon: PropTypes.string.isRequired,
+  name: PropTypes.string,
+  gestureIcon: PropTypes.string,
   onClick: PropTypes.func
 };
 
 Roundel.defaultProps = {
+  type: '',
   isWinner: false,
+  name: '',
+  gestureIcon: '',
   onClick: () => {}
 };
 

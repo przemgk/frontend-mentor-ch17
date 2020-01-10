@@ -5,17 +5,21 @@ import Footer from 'components/Footer';
 // import Modal from 'components/Modal';
 import Start from 'views/Start';
 import Round from 'views/Round';
+import { Provider } from 'react-redux';
+import store from 'store';
 
 const Root = () => (
-  <BrowserRouter>
-    <Header />
-    <Switch>
-      <Route exact path="/" component={Start} />
-      <Route exact path="/round" component={Round} />
-    </Switch>
-    {/* <Modal /> */}
-    <Footer />
-  </BrowserRouter>
+  <Provider store={store}>
+    <BrowserRouter>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={Start} />
+        <Route exact path="/round" component={Round} />
+      </Switch>
+      {/* <Modal /> */}
+      <Footer />
+    </BrowserRouter>
+  </Provider>
 );
 
 export default Root;
