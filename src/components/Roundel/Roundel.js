@@ -43,7 +43,7 @@ Roundel.defaultProps = {
 const mapStateToProps = (state, { type }) => {
   const [roundel] = state.roundelTypes.filter(({ name }) => name === type);
 
-  return roundel;
+  return roundel || {};
 };
 
 export default connect(mapStateToProps)(Roundel);
