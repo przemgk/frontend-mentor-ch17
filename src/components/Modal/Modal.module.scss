@@ -12,6 +12,15 @@
   background-color: $color__white;
   color: $color__dark-text;
   border-radius: 10px;
+  z-index: 100;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+}
+
+.isOpen {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .heading {
@@ -31,8 +40,10 @@
   display: block;
   position: absolute;
   bottom: 48px;
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border: 0;
   cursor: pointer;
 }
 
