@@ -4,8 +4,8 @@ import cn from 'classnames';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-const Roundel = ({ type, isWinner, name, gestureIcon, onClick }) => {
-  const roundelClass = cn(styles.roundel, styles[type.toLowerCase()]);
+const Roundel = ({ type, isWinner, name, gestureIcon, onClick, big }) => {
+  const roundelClass = cn(styles.roundel, styles[type.toLowerCase()], { [styles.big]: big });
 
   const handleEnterPress = e => e.key === 'Enter' && onClick();
 
@@ -29,7 +29,8 @@ Roundel.propTypes = {
   isWinner: PropTypes.bool,
   name: PropTypes.string,
   gestureIcon: PropTypes.string,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  big: PropTypes.bool
 };
 
 Roundel.defaultProps = {
@@ -37,7 +38,8 @@ Roundel.defaultProps = {
   isWinner: false,
   name: '',
   gestureIcon: '',
-  onClick: () => {}
+  onClick: () => {},
+  big: false
 };
 
 const mapStateToProps = (state, { type }) => {

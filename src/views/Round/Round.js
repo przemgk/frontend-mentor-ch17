@@ -72,12 +72,12 @@ const Round = ({ userChoice, roundelTypes, incrementScore, decrementScore, clear
   return (
     <div className={styles.wrapper}>
       <div className={styles.box}>
-        <Roundel type={userChoice} isWinner={roundResult === 'you win'} />
+        <Roundel big type={userChoice} isWinner={roundResult === 'you win'} />
         <h2 className={styles.label}>You picked</h2>
       </div>
       <div className={styles.box}>
         {!counter ? (
-          <Roundel type={computerChoice.name} isWinner={roundResult === 'computer win'} />
+          <Roundel big type={computerChoice.name} isWinner={roundResult === 'computer win'} />
         ) : (
           <div ref={placeholderRef} className={styles.placeholder} />
         )}

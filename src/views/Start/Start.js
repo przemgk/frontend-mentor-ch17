@@ -5,9 +5,14 @@ import PropTypes from 'prop-types';
 import { setUserChoiceAction } from 'actions';
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import BgPentagon from 'assets/bg-pentagon.svg';
 
 const Start = ({ roundelTypes, userChoice, setUserChoice }) => {
   const history = useHistory();
+
+  const wrapperStyles = {
+    backgroundImage: `url(${BgPentagon})`
+  };
 
   useLayoutEffect(() => {
     if (userChoice) {
@@ -16,9 +21,11 @@ const Start = ({ roundelTypes, userChoice, setUserChoice }) => {
   });
 
   return (
-    <div className={styles.wrapper}>
+    <div style={wrapperStyles} className={styles.wrapper}>
       {roundelTypes.map(({ name }) => (
-        <Roundel onClick={() => setUserChoice(name)} type={name} key={name} />
+        <div className={styles[name.toLowerCase()]} key={name}>
+          <Roundel onClick={() => setUserChoice(name)} type={name} />
+        </div>
       ))}
     </div>
   );
